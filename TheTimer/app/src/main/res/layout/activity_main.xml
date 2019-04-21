@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back">
+
+    <ProgressBar
+        android:id="@+id/progressBarCircle"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="176dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="79dp"
+        android:background="@drawable/drawable_circle_dark_blue"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="100"
+        android:progressDrawable="@drawable/drawable_circle_yellow"
+        android:rotation="-90" />
+
+    <EditText
+        android:id="@+id/editTextMinuteWork"
+        android:layout_width="64dp"
+        android:layout_height="34dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="31dp"
+        android:gravity="center"
+        android:hint="@string/hint_minute"
+        android:inputType="number"
+        android:maxLength="15"
+        android:maxLines="1"
+        android:minEms="5"
+        android:text="5"
+        android:textColor="@color/colorYellow"
+        android:textColorHint="@color/colorYellow"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/workTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="39dp"
+        android:text="Work"
+        android:textColor="@color/colorYellow" />
+
+    <EditText
+        android:id="@+id/editTextMinuteBreak"
+        android:layout_width="64dp"
+        android:layout_height="34dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/editTextMinuteWork"
+        android:layout_marginEnd="29dp"
+        android:gravity="center"
+        android:hint="@string/hint_minute"
+        android:inputType="number"
+        android:maxLength="15"
+        android:maxLines="1"
+        android:minEms="5"
+        android:text="1"
+        android:textColor="@color/colorYellow"
+        android:textColorHint="@color/colorYellow"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/progressBarCircle"
+        android:layout_alignTop="@+id/workTextView"
+        android:text="Break"
+        android:textColor="@color/colorYellow" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="156dp"
+        android:text="00:01:00"
+        android:textColor="@color/colorYellow"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/imageViewReset"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="208dp"
+        android:src="@drawable/icon_reset"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imageViewStartStop"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/icon_start"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/startStopButton"
+        android:layout_width="69dp"
+        android:layout_height="69dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="27dp"
+        android:background="@drawable/start_selector" />
+
+</RelativeLayout>
