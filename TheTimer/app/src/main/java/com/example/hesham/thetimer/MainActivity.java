@@ -36,8 +36,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText editTextMinuteWork;
     private EditText editTextMinuteBreak;
     private TextView textViewTime;
-    private ImageView imageViewReset;
-    private ImageView imageViewStartStop;
     private CountDownTimer countDownTimer;
     private Button buttonStartStop;
 
@@ -60,15 +58,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editTextMinuteWork = findViewById(R.id.editTextMinuteWork);
         editTextMinuteBreak = findViewById(R.id.editTextMinuteBreak);
         textViewTime = findViewById(R.id.textViewTime);
-        imageViewReset = findViewById(R.id.imageViewReset);
-        imageViewStartStop = findViewById(R.id.imageViewStartStop);
         buttonStartStop = findViewById(R.id.startStopButton);
     }
 
 
     private void initListeners() {
-        imageViewReset.setOnClickListener(this);
-        imageViewStartStop.setOnClickListener(this);
         buttonStartStop.setOnClickListener(this);
     }
 
@@ -76,23 +70,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.imageViewReset:
-                reset();
-                break;
-           // case R.id.imageViewStartStop:
-           //     startStop();
-           //     break;
             case R.id.startStopButton:
                 startStop();
                 break;
         }
     }
 
-
-    private void reset() {
-        stopCountDownTimer();
-        startCountDownTimer();
-    }
 
 
 
@@ -103,10 +86,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             setTimerValues();
             // call to initialize the progress bar values
             setProgressBarValues();
-            // showing the reset icon
-            //imageViewReset.setVisibility(View.VISIBLE);
-            // changing play icon to stop icon
-            //imageViewStartStop.setImageResource(R.drawable.icon_stop);
             buttonStartStop.setBackground(this.getResources().getDrawable(R.drawable.stop_selector));
             // making edit text not editable
             editTextMinuteWork.setEnabled(false);
@@ -118,10 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         } else {
 
-            // hiding the reset icon
-            imageViewReset.setVisibility(View.GONE);
             // changing stop icon to start icon
-            //imageViewStartStop.setImageResource(R.drawable.icon_start);
             buttonStartStop.setBackground(this.getResources().getDrawable(R.drawable.start_selector));
             // making edit text editable
             editTextMinuteWork.setEnabled(true);
@@ -166,10 +142,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 textViewTime.setText(hmsTimeFormatter(timeCountInMilliSeconds));
                 // call to initialize the progress bar values
                 setProgressBarValues();
-                // hiding the reset icon
-                imageViewReset.setVisibility(View.GONE);
-                // changing stop icon to start icon
-                imageViewStartStop.setImageResource(R.drawable.icon_start);
                 // making edit text editable
                 editTextMinuteWork.setEnabled(true);
                 editTextMinuteBreak.setEnabled(true);

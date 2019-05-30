@@ -84,29 +84,10 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="156dp"
-        android:text="00:01:00"
+        android:text="00:05:00"
         android:textColor="@color/colorYellow"
         android:textSize="25sp" />
 
-    <ImageView
-        android:id="@+id/imageViewReset"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="208dp"
-        android:src="@drawable/icon_reset"
-        android:visibility="gone" />
-
-    <ImageView
-        android:id="@+id/imageViewStartStop"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:src="@drawable/icon_start"
-        android:visibility="gone"/>
 
     <Button
         android:id="@+id/startStopButton"
